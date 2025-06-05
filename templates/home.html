@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Sentiment Analysis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">FinSentiment</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/data-exploration">Data Exploration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/model-comparison">Model Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">Try Prediction</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1 class="mt-4">Financial Sentiment Analysis</h1>
+                    <p class="lead">Analyze the sentiment of financial news headlines using machine learning and deep learning models.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Sample Data Preview
+                    </div>
+                    <div class="card-body" style="color: white;">
+                        <style>
+                            /* Ensure all table elements have white text */
+                            .card-body table, .card-body th, .card-body td {
+                                color: white !important;
+                            }
+                        </style>
+                        {{ sample_table|safe }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Quick Actions
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="/data-exploration" class="btn btn-primary btn-block mb-3">Explore Data</a>
+                            <a href="/model-comparison" class="btn btn-secondary btn-block mb-3">Model Comparison</a>
+                            <a href="/predict" class="btn btn-success btn-block">Try Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Quick Sentiment Analysis
+                    </div>
+                    <div class="card-body">
+                        <form action="/predict" method="post" class="mt-4">
+                            <div class="form-group">
+                                <label for="headline">Enter a financial news headline:</label>
+                                <input type="text" class="form-control" id="headline" name="headline" required>
+                            </div>
+                            <button type="submit" class="btn btn-success">Predict Sentiment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>Financial Sentiment Analysis Dashboard &copy; 2025</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
