@@ -87,4 +87,14 @@ This project implements a comprehensive **financial sentiment analysis system** 
 
 ---
 
+## 📦 Trained Models (KNN and SVM)
+
+The `.joblib` model files are larger than GitHub’s 100 MB file size limit, so they are not included in this repository.
+
+You can download all required models from the following Google Drive folder:
+
+- [📁 Download All Models (Google Drive Folder)](https://drive.google.com/drive/folders/1f0IxyhMWLhK_gfV9y-RhnzyqAuEDzV0l?usp=sharing)
+
+After downloading, place all files into the `models/` directory in your local project.
+
 
